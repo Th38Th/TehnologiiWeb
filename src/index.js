@@ -1,12 +1,14 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("HELLOW");
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', (req, res) => {
+  res.send('HELLOW');
 });
 
-app.get("/ping", (req, res) => {
-  res.send("pong");
+app.get('/ping', (req, res) => {
+  res.send('pong');
 });
 
 app.listen(8080);
