@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage@Th38Th</title>
+    <style>
+      .generic {
+        border: 1.5px solid darkgray;
+        border-radius: .5em;
+        background-color: lightgray; 
+        padding: .5em;
+      }
+      .std-field {
+        border-style: none none solid none;
+        border-color: gray;
+        background: transparent;
+        transition-duration: .25s;
+      } 
+      .std-field:hover {
+        border-color: gray;
+        background: transparent;
+        transition-duration: .25s;
+      }
+      .std-field:focus {
+        outline: none;
+        border-color: cornflowerblue;
+        transition-duration: .5s;
+      }
+      .std-button {
+        background-color: white;
+        transition-duration: .25s;
+      }
+      .std-button:hover {
+        filter: brightness(75%);
+        transition-duration: .25s;
+      }
+      .std-button:active {
+        filter: brightness(50%);
+        transition-duration: .5s;
+      }
+      .icon-msg {
+        background-color: whitesmoke;
+        vertical-align: middle;
+      }
+      .std-fieldset {
+        border-color: darkgray;
+        width: fit-content;
+      }
+    </style>
+    <script>
+      function updateName() {
+        var s = document.getElementById('tbNume').value;
+        if (s != "") {
+          var nb = document.getElementById('nameBox');
+          nb.textContent = s;
+          nb.style.display = 'inline';
+        }
+      }
+    </script>
+    <svg>
+    </svg>
+  </head>
+  <body>
+    <h1>
+      Hello Web!
+    </h1>
+    <p>
+      Salutare,
+      <div id="nameBox" class="generic">
+        <p>...persoana care navigheaza pe web!</p>
+        <p>Sorry, nu stiu cum te cheama...</p>
+        <form>
+          <fieldset class="generic std-fieldset">
+          <label for="tbNume">Ai putea sa-mi zici?</label>
+          <input
+            id="tbNume"
+            name="nume"
+            type="text"
+            class="std-field"
+            placeholder="Numele tau..."
+          />          
+          <input id="btnCfm" type="button" class="generic std-button" onclick="updateName()" value="OK" />
+          </fieldset>
+        </form>
+        <p class="generic icon-msg">
+          <img src="./warn.svg"/> Nu pot continua pana nu stiu cine esti...
+        <p>
+      </div>
+    </p>
+  </body>
+</html>
