@@ -1,0 +1,42 @@
+.generic {
+  border: 1.5px solid darkgray;
+  border-radius: .5em;
+  background-color: lightgray; 
+  padding: .5em;
+}
+.std-field {
+  border-style: none none solid none;
+  border-color: gray;
+  background: transparent;
+  transition-duration: .25s;
+} 
+.std-field:hover {
+  border-color: gray;
+  background: transparent;
+  transition-duration: .25s;
+}
+.std-field:focus {
+  outline: none;
+  border-color: cornflowerblue;
+  transition-duration: .5s;
+}
+.std-button {
+  background-color: white;
+  transition-duration: .25s;
+}
+.std-button:hover {
+  filter: brightness(75%);
+  transition-duration: .25s;
+}
+.std-button:active {
+  filter: brightness(50%);
+  transition-duration: .5s;
+}
+.icon-msg {
+  vertical-align: middle;
+}
+.std-box {
+  border-color: darkgray;
+  background-color: whitesmoke;
+  width: fit-content;
+}
