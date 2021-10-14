@@ -7,6 +7,6 @@ function getNrCaractereDif(str1, str2) {
   return r;
 }
 
-console.log('Mere', 'Pere');
-console.log('Revenge of the Sith', 'Return of the Jedi');
-console.log('CTAGGGACCTCAAA', 'GATCCCTGGAGTTT');
+console.log(getNrCaractereDif('Mere', 'Pere'));
+console.log(getNrCaractereDif('Revenge of the Sith', 'Return of the Jedi'));
+console.log(getNrCaractereDif('CTAGGGACCTCAAA', 'GATCCCTGGAGTTT'));
