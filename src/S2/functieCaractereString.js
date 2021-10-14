@@ -8,5 +8,5 @@ function getNrCaractereDif(str1, str2) {
 }
 
 console.log(getNrCaractereDif('Mere', 'Pere'));
-console.log(getNrCaractereDif('Revenge of the Sith', 'Return of the Jedi'));
+console.log(getNrCaractereDif('0101100110111', '0111011101000'));
 console.log(getNrCaractereDif('CTAGGGACCTCAAA', 'GATCCCTGGAGTTT'));
