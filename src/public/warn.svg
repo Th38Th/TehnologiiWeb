@@ -1,0 +1,17 @@
+<svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+  <defs> 
+    <linearGradient id="wsBack" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(255,200,200);stop-opacity:1"/>
+      <stop offset="75%" style="stop-color:rgb(127,0,55);stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .excl { font: bold 16px sans-serif; fill: white; }
+  </style>
+  <polygon points="0,32 16,0 32,32" 
+  fill="url(#wsBack)" 
+  stroke="maroon"
+  stroke-linejoin="round"
+  stroke-width="1"/>
+  <text x="16" y="20" class="excl" alignment-baseline="middle" text-anchor="middle">!</text>
+</svg>
