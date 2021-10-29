@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="simple_rle.js"></script>
+    <script type="text/javascript">
+      async function encFile(e) {
+        let enc_file = await SimpleRLE.comp_file(
+          document.querySelector('#fis_codif').files[0]
+        );
+        let the_a = document.querySelector('#lnk_dl_codif');
+        the_a.href = window.URL.createObjectURL(enc_file);
+        the_a.download = `[ENC]${enc_file.name}`;
+      }
+      async function decFile(e) {
+        let dec_file = await SimpleRLE.decomp_file(
+          document.querySelector('#fis_decodif').files[0]
+        );
+        let the_a = document.querySelector('#lnk_dl_decodif');
+        the_a.href = window.URL.createObjectURL(dec_file);
+        the_a.download = `[DEC]${dec_file.name}`;
+      }
+      function app() {
+        document
+          .querySelector('#fis_codif')
+          .addEventListener('change', encFile);
+        document
+          .querySelector('#fis_decodif')
+          .addEventListener('change', decFile);
+      }
+      document.addEventListener('DOMContentLoaded', app);
+    </script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <label for="fis_codif">Comprimati fisierul: </label>
+        <input type="file" id="fis_codif" />
+        <a id="lnk_dl_codif">Descarcare</a>
+      </fieldset>
+      <fieldset>
+        <label for="fis_codif">Decomprimati fisierul: </label>
+        <input type="file" id="fis_decodif" />
+        <a id="lnk_dl_decodif">Descarcare</a>
+      </fieldset>
+    </form>
+  </body>
+</html>
