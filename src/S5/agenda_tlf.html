@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      const date = [
+        {
+          nume: 'noName',
+          telefon: '000---'
+        }
+      ];
+      function draw() {
+        let tbody = document.querySelector('tbody');
+        tbody.innerHTML = '';
+        for (let d of date) {
+          let rand = document.createElement('tr');
+          rand.appendChild(document.createElement('td')).textContent = d.nume;
+          rand.appendChild(document.createElement('td')).textContent =
+            d.telefon;
+          tbody.appendChild(rand);
+        }
+      }
+      function app() {
+        draw();
+      }
+      document.addEventListener('DOMContentLoaded', app);
+    </script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td>
+            Nume
+          </td>
+          <td>
+            Telefon
+          </td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      const evt = new Event('dupl');
+      function app() {
+        document.querySelector('#orig').addEventListener('click', (e) => {
+          document.dispatchEvent(evt);
+        });
+        document.addEventListener('dupl', (e) => {
+          let ch = [];
+          for (let node of document.body.children)
+            ch.push(node.cloneNode(true));
+          for (let node of ch) {
+            let clr_hue_angle = Math.random() * 360;
+            node.style.backgroundColor = `hsl(${clr_hue_angle}
+            , 100%, 50%)`;
+            node.style.color = `hsl(${clr_hue_angle + 180}
+            , 100%, 50%)`;
+            node.addEventListener('click', (e) => document.dispatchEvent(evt));
+            document.body.appendChild(node);
+          }
+        });
+      }
+      document.addEventListener('DOMContentLoaded', app);
+    </script>
+  </head>
+  <body>
+    <button id="orig">Butonul 1</button>
+  </body>
+</html>

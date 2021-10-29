@@ -1,0 +1,1 @@
+console.log("Exemplu fisier creat dinamic")
