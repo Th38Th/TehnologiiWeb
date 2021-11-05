@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Formular stilizat
+    </title>
+    <style type="text/css">
+      * {
+        font-family: 'Arial';
+        font-size: 14px;
+      }
+      h1 {
+        font-size: 16px;
+      }
+      input,
+      select,
+      textarea {
+        border: 1px solid silver;
+        box-sizing: border-box;
+        border-radius: 8px;
+        margin: 0.5em;
+        padding: 0.5em;
+        display: block;
+      }
+      input[type='text'],
+      select,
+      textarea {
+        width: 100%;
+      }
+      label {
+        margin-top: 0.75em;
+        margin-bottom: 0.25em;
+        display: block;
+      }
+      input[type='submit'] {
+        background-color: mediumseagreen;
+        border: none;
+        color: white;
+        padding: 1em;
+      }
+      form {
+        background-color: gainsboro;
+        border-radius: 8px;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contact Form</h1>
+    <form>
+      <label for="tb-fname">First Name</label>
+      <input
+        type="text"
+        id="tb-fname"
+        name="prenume"
+        placeholder="Your name..."
+      />
+      <label for="tb-lname">Last Name</label>
+      <input
+        type="text"
+        id="tb-lname"
+        name="nume"
+        placeholder="Your last name..."
+      />
+      <label for="cb-country">Country</label>
+      <select id="cb-country" name="country" placeholder="Your country...">
+        <option value="HU">Hungary</option>
+        <option value="AT">Austria</option>
+        <option value="DE">Germany</option>
+      </select>
+      <label for="ta-subject">Subject</label>
+      <textarea
+        id="ta-subject"
+        name="subject"
+        placeholder="Write something..."
+      ></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

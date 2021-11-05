@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Macheta CSS X si 0
+    </title>
+    <style type="text/css">
+      .container {
+        display: table;
+        float: right;
+        background-color: lightgray;
+      }
+      .row {
+        display: table-row;
+      }
+      .square {
+        display: table-cell;
+        border-width: 1px;
+        border-style: none;
+        width: 32px;
+        height: 32px;
+      }
+      .top {
+        border-bottom-color: gray;
+        border-bottom-style: solid;
+      }
+      .bottom {
+        border-top-color: gray;
+        border-top-style: solid;
+      }
+      .left {
+        border-right-color: gray;
+        border-right-style: solid;
+      }
+      .right {
+        border-left-color: gray;
+        border-left-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="top left square"></div>
+        <div class="top middle square"></div>
+        <div class="top right square"></div>
+      </div>
+      <div class="row">
+        <div class="middle left square"></div>
+        <div class="middle center square"></div>
+        <div class="middle right square"></div>
+      </div>
+      <div class="row">
+        <div class="bottom left square"></div>
+        <div class="bottom middle square"></div>
+        <div class="bottom right square"></div>
+      </div>
+    </div>
+  </body>
+</html>
